@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const yearSpan = document.getElementById('year');
     const dateSlider = document.getElementById('dateSlider');
     const speedSlider = document.getElementById('speedSlider');
-    const rewindButton = document.getElementById('rewindButton');
+    const startButton = document.getElementById('startButton');
 
     const startDate = new Date(2023, 0, 1);
     const endDate = new Date(2023, 11, 31); // Updated end date
@@ -22,12 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
         dateSlider.value = percentage;
     }
 
-    function rewindDates() {
-        currentDate = new Date(startDate);
-        updateDate();
-        updateSlider();
-    }
-
     function replayDates() {
         const speed = parseInt(speedSlider.value);
         const intervalId = setInterval(() => {
@@ -41,8 +35,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }, speed);
     }
 
-    rewindButton.addEventListener('click', () => {
-        rewindDates();
+    startButton.addEventListener('click', () => {
+        currentDate = new Date(startDate);
+        updateDate();
+        replayDates();
     });
 
     dateSlider.addEventListener('input', () => {
