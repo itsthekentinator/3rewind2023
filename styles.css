@@ -1,0 +1,42 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: rgb(1, 177, 64); /* Chroma key green */
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    margin: 50px;
+}
+
+#dateBox {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    font-size: 200pt;
+    margin: 5px;
+}
+
+#sliderContainer, #speedContainer {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 300px;
+    margin: 0 10px;
+}
+
+button {
+    font-size: 20pt;
+    padding: 10px 20px;
+    cursor: pointer;
+}

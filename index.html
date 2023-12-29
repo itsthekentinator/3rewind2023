@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Date Replay</title>
+</head>
+<body>
+    <div class="container">
+        <div id="dateBox">
+            <span id="day"></span>
+            <span id="month"></span>
+            <span id="year"></span>
+        </div>
+        <div id="sliderContainer">
+            <label>Adjust Date:</label>
+            <input type="range" id="dateSlider" min="0" max="100" step="1" value="0">
+        </div>
+        <div id="speedContainer">
+            <label>Replay Speed (ms):</label>
+            <input type="range" id="speedSlider" min="100" max="1000" step="50" value="500">
+        </div>
+        <button id="rewindButton">Rewind</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
